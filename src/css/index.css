@@ -1,9 +1,11 @@
 .search {
   color: #545454;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 28px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
   margin-top: 30px;
+
 }
 
 hr {
