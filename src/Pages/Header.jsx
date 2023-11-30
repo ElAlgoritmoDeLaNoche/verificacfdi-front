@@ -12,10 +12,14 @@ const Header = () => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              <h5>Trámites</h5>
+              <a href="https://www.gob.mx/tramites">
+                <h5>Trámites</h5>
+              </a>
             </Navbar.Text>
             <Navbar.Text>
-              <h5>Gobierno</h5>
+              <a href="https://www.gob.mx/gobierno">
+                <h5>Gobierno</h5>
+              </a>
             </Navbar.Text>
             <Navbar.Text>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-search icon" viewBox="0 0 16 16">
