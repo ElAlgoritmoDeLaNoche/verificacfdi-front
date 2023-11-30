@@ -54,7 +54,7 @@ const Default = () => {
   return (
     <Container style={{ height: '100vh' }}>
       <div className="logohacienda"><img src={hacienda} alt="" /></div>
-      <h1 className='search'>Verificación de comprobantes fiscales digitales por internet</h1>
+      <h3 className='search'>Verificación de comprobantes fiscales digitales por internet</h3>
       <hr />
       <label className='certificate'>A través de esta opción, usted podrá verificar si el comprobante fue certificado por el SAT</label>
       <Form onSubmit={handleSearchSubmit} className='form'>

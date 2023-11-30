@@ -1,4 +1,5 @@
 .search {
+  line-height: 141%;
   color: #545454;
   font-weight: bold;
   font-size: 28px;
@@ -24,6 +25,7 @@ hr {
   font-weight: 300;
   color: #393C3E;
   font-size: 14px;
+  padding-top: 130px;
 }
 
 .home a {
@@ -97,6 +99,9 @@ th {
 
 .App-header {
   background-color: #0C231E;
+  z-index: 1;
+  position: fixed !important;
+  width: 100% !important;
 }
 
 .App-header h5 {
@@ -128,6 +133,10 @@ svg {
   align-items: center;
   height: 50px;
   background: #13322B;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  position: fixed;
+  width: 100%;
 }
 
 .fac h2 {
