@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import HCaptcha from 'react-hcaptcha';
 
@@ -21,6 +21,7 @@ const Default = () => {
   const [captchaToken, setCaptchaToken] = useState(null);
 
   const tableRef = useRef();
+  const inputRef = useRef(null);
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
@@ -51,6 +52,43 @@ const Default = () => {
     window.print();
   };
 
+  const formatFolioFiscal = (value) => {
+    // Eliminar caracteres no permitidos (dejar solo letras y números)
+    value = value.replace(/[^a-zA-Z0-9]/g, '');
+
+    // Añadir guiones según la estructura deseada
+    let formattedValue = '';
+    let currentIndex = 0;
+
+    for (let i = 0; i < value.length; i++) {
+      if (currentIndex === 8 || currentIndex === 13 || currentIndex === 18 || currentIndex === 23) {
+        formattedValue += '-';
+        currentIndex++;
+      }
+
+      formattedValue += value[i];
+      currentIndex++;
+    }
+
+    // Agregar guiones restantes si es necesario
+    while (currentIndex <= 36) {
+      if (currentIndex === 8 || currentIndex === 13 || currentIndex === 18 || currentIndex === 23) {
+        formattedValue += '-';
+        currentIndex++;
+      } else {
+        formattedValue += '_';
+        currentIndex++;
+      }
+    }
+
+    return formattedValue;
+  };
+
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value;
+    const formattedValue = formatFolioFiscal(inputValue);
+    setFolioFiscal(formattedValue);
+  };
   return (
     <Container style={{ height: '100vh' }}>
       <div className="logohacienda"><img src={hacienda} alt="" /></div>
@@ -63,7 +101,14 @@ const Default = () => {
             <Form.Group className="mb-3">
               <Form.Label>
                 Folio fiscal*:
-                <Form.Control type="text" value={folioFiscal} onChange={(e) => setFolioFiscal(e.target.value)} required />
+                <Form.Control
+                  type="text"
+                  value={folioFiscal}
+                  onChange={handleInputChange}
+                  ref={inputRef}
+                  placeholder="________-____-____-____-____________"
+                  required
+                />
               </Form.Label>
             </Form.Group>
           </Col>
