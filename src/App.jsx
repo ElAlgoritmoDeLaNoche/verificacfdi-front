@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Admin from './Pages/Admin'
 import Default from './Pages/Default'
