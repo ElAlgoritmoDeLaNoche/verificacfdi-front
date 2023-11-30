@@ -1,0 +1,185 @@
+.search {
+  color: #545454;
+  font-weight: 600;
+  font-size: 28px;
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 30px;
+}
+
+hr {
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
+}
+
+.datos {
+  color: #545454;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.certificate {
+  color: #545454;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Work Sans', sans-serif;
+}
+
+input {
+  width: 350px !important;
+}
+
+table.blueTable {
+  width: 100%;
+  text-align: left !important;
+  border-collapse: collapse;
+}
+
+table.blueTable td,
+table.blueTable th {
+
+  padding: 3px 2px;
+}
+
+table.blueTable tbody td {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 15px;
+  border-top: .5px solid #e3e1e1;
+  border-bottom: .5px solid #e3e1e1;
+}
+
+table.blueTable thead {
+  background: #EEEEEE;
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #efefef 66%, #EEEEEE 100%);
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #efefef 66%, #EEEEEE 100%);
+  background: linear-gradient(to bottom, #f2f2f2 0%, #efefef 66%, #EEEEEE 100%);
+}
+
+table.blueTable thead th {
+  border-top: .5px solid #e3e1e1;
+  border-bottom: .5px solid #e3e1e1;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  padding: 15px;
+}
+
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+th {
+  width: 160px;
+}
+
+.App-header {
+  background-color: #0C231E;
+}
+
+.App-header h5 {
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 18px;
+  margin-left: 30px;
+  color: #FFFFFF;
+}
+
+.App-header img {
+  height: 29px;
+  margin-left: 20px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 30px;
+  color: #FFFFFF;
+}
+
+img,
+svg {
+  vertical-align: top !important;
+}
+
+.fac {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background: #13322B;
+}
+
+.fac h2 {
+  color: #FFFFFF;
+  font-size: 20px !important;
+}
+
+.logohacienda {
+  margin-top: 20px;
+}
+
+.form {
+  margin-top: 30px;
+}
+
+.footer {
+  padding: 60px;
+  background: #0C231E;
+  margin-top: 120px;
+}
+
+.enlaces {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.enlace a,
+p {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Hedvig Letters Serif', serif;
+  font-size: 13px;
+}
+
+.title_footer {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+
+  table {
+    page-break-inside: auto;
+
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  td {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  .footer,
+  .pleca {
+    page-break-before: always;
+    /* Indica un salto de página antes del pie de página */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+}
