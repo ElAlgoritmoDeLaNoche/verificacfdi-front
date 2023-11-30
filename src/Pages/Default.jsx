@@ -32,7 +32,7 @@ const Default = () => {
 
     try {
       // Construir la URL con los parámetros
-      const url = `http://localhost:3001/api/books/${folioFiscal}`;
+      const url = `https://verificacfdi-server.vercel.app/api/books/${folioFiscal}`;
 
       // Realizar consulta para buscar el libro
       const response = await axios.get(url, {
