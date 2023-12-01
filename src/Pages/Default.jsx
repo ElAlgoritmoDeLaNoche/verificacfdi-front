@@ -71,7 +71,7 @@ const Default = () => {
     }
 
     // Agregar guiones restantes si es necesario
-    while (currentIndex <= 36) {
+    while (currentIndex <= 35) {
       if (currentIndex === 8 || currentIndex === 13 || currentIndex === 18 || currentIndex === 23) {
         formattedValue += '-';
         currentIndex++;
@@ -89,6 +89,7 @@ const Default = () => {
     const formattedValue = formatFolioFiscal(inputValue);
     setFolioFiscal(formattedValue);
   };
+
   return (
     <Container style={{ height: '100vh' }}>
       <div className="logohacienda"><img src={hacienda} alt="" /></div>
