@@ -11,7 +11,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" exact element={<Default />} />
-        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />
     </BrowserRouter>
