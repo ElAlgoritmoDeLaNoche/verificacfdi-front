@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Admin from './Pages/Admin'
 import Default from './Pages/Default'
 import Header from './Pages/Header'
 import Footer from './Pages/Footer'

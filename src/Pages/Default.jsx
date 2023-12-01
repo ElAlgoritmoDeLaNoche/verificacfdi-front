@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
-import HCaptcha from 'react-hcaptcha';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -12,6 +11,7 @@ import '../css/index.css';
 import Footer from './Footer';
 
 import hacienda from '../images/hacienda.jpg'
+import captcha from '../images/GeneraCaptcha.jpeg'
 
 const Default = () => {
 
@@ -25,11 +25,6 @@ const Default = () => {
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
-
-    // if (!captchaToken) {
-    //   alert('Por favor, complete el captcha.');
-    //   return;
-    // }
 
     try {
       // Construir la URL con los parámetros
@@ -90,6 +85,18 @@ const Default = () => {
     setFolioFiscal(formattedValue);
   };
 
+  const verificarNumero = () => {
+    // Obtener el valor del input
+    var valorIngresado = document.getElementById("numeroInput").value;
+
+    // Comparar con el valor deseado
+    if (valorIngresado === "19580") {
+      alert("¡El número ingresado es igual a 19580!");
+    } else {
+      alert("El número ingresado no es igual a 19580. Por favor, inténtelo de nuevo.");
+    }
+  }
+
   return (
     <Container style={{ height: '100vh' }}>
       <div className="logohacienda"><img src={hacienda} alt="" /></div>
@@ -130,12 +137,14 @@ const Default = () => {
             </Form.Group>
           </Col>
           <Col xs lg='4'>
-            <HCaptcha
-              sitekey="729646fd-8422-468a-84c0-47892b32d62e"
-              onVerify={(token) => setCaptchaToken(token)}
-            />
+            <img src={captcha} alt="" />
           </Col>
-          <Col xs lg='4'></Col>
+          <Col xs lg='4'>
+            <Form.Label>
+              Proporcione los dígitos de la imagen*:
+              <Form.Control type="text" required onChange={verificarNumero} />
+            </Form.Label>
+          </Col>
           <Col xs lg='4'>
             <Button type="submit" variant="primary">Verificar CFDI</Button>
           </Col>
